@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    border-color: rgb(0, 0, 0, 0.1);
+}
+
+nav .left{ 
+    display: flex;
+    font-size: 1em;
+    color: #000000;
+    margin-left: 20px;
+}
+nav .left h1{
+    font-weight: 700;
+}
+nav .left h2{
+    font-weight: 400;
+}
+
+nav .center{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    transform: translateX(600px);
+
+    transition: transform 0.4s;
+}
+nav .mobile-menu{
+    transform: translateX(0px);    
+}
+nav .center a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    color: #000000;
+    opacity: 0.6;
+    margin-top: 20px;
+
+    transition: opacity .3s;
+}
+nav .center a:hover{
+    opacity: 1;
+}
+nav .center .active{
+    opacity: 1;
+}
+
+nav .right{
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+} 
+nav .right img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+nav .right .cross-icon{
+    position: absolute;
+    z-index: 1;
+    transform: translateX(600px);
+
+    transition: transform 0.4s;
+
+}
+nav .right .mobile-menu{
+    transform: translateX(0px);
+}
+
+
+@media screen and (min-width: 480px){
+    nav .center{
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: auto;
+        width: 60%;
+        backdrop-filter: blur(0px);
+        transform: translateX(0px);
+    }
+    nav .center a{
+        display: flex;
+        font-size: .7em;
+        text-transform: uppercase; 
+        margin-top: 0px;
+    }
+    nav .right .cross-icon{
+        display: none;
+    }
+    nav .right .burger-menu{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px){
+    nav .center a{
+        font-size: .8em;
+    }
+    nav .center{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    nav{
+        justify-content: space-evenly;
+    }
+    nav .center{
+        width: 30%;
+    }
+}
