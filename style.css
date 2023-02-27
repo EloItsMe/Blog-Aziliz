@@ -30,6 +30,7 @@ nav .left h2{
     font-weight: 400;
 }
 nav .center{
+    z-index: 1;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -69,14 +70,16 @@ nav .right{
     margin-right: 20px;
 } 
 nav .right svg{
+    z-index: 0;
     width: 30px;
     height: 30px;
     margin-left: 10px;
+    opacity: .6;
+
+    transition: opacity .3s;
 }
-nav .right img{
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
+nav .right svg:hover{
+    opacity: 1;
 }
 nav .right .cross-icon{
     position: absolute;
