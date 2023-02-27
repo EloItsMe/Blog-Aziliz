@@ -8,6 +8,8 @@ html, body{
     font-family: 'Cormorant Garamond', serif;
 }
 
+
+
 nav{
     display: flex;
     align-items: center;
@@ -15,7 +17,6 @@ nav{
     border-bottom: solid 1px;
     border-color: rgb(0, 0, 0, 0.1);
 }
-
 nav .left{ 
     display: flex;
     font-size: 1em;
@@ -28,7 +29,6 @@ nav .left h1{
 nav .left h2{
     font-weight: 400;
 }
-
 nav .center{
     position: absolute;
     display: flex;
@@ -63,12 +63,16 @@ nav .center a:hover{
 nav .center .active{
     opacity: 1;
 }
-
 nav .right{
     display: flex;
     justify-content: end;
     margin-right: 20px;
 } 
+nav .right svg{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
 nav .right img{
     width: 30px;
     height: 30px;
@@ -85,6 +89,9 @@ nav .right .cross-icon{
 nav .right .mobile-menu{
     transform: translateX(0px);
 }
+
+
+
 
 
 @media screen and (min-width: 480px){
@@ -111,7 +118,6 @@ nav .right .mobile-menu{
         display: none;
     }
 }
-
 @media screen and (min-width: 769px){
     nav .center a{
         font-size: .8em;
@@ -120,7 +126,6 @@ nav .right .mobile-menu{
         width: 50%;
     }
 }
-
 @media screen and (min-width: 1280px){
     nav{
         justify-content: space-evenly;
