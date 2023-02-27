@@ -41,12 +41,12 @@ nav .center{
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(10px);
-    transform: translateX(600px);
+    transform: translateY(-800px);
 
     transition: transform 0.4s;
 }
 nav .mobile-menu{
-    transform: translateX(0px);    
+    transform: translateY(0px);    
 }
 nav .center a{
     text-decoration: none;
@@ -84,13 +84,13 @@ nav .right svg:hover{
 nav .right .cross-icon{
     position: absolute;
     z-index: 1;
-    transform: translateX(600px);
+    transform: translateY(-800px);
 
     transition: transform 0.4s;
 
 }
 nav .right .mobile-menu{
-    transform: translateX(0px);
+    transform: translateY(0px);
 }
 
 
